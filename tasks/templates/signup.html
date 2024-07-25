@@ -8,6 +8,7 @@
   <body>
     <h1>Hola esta es una vista</h1>
     <form action="/signup/" method="POST">
+      {{error}}
       {% csrf_token %} 
       {{form.as_p}}
       <button>signup</button>
