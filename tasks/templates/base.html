@@ -11,10 +11,17 @@
             <li>
                 <a href="/">Home</a>
             </li>
-            <li>
-                <a href="/tasks">Tasks</a>
-            </li>
+            
             {% if user.is_authenticated%}
+            <li>
+                <a href="{% url "tasks" %}">Tasks</a>
+            </li>
+            <li>
+                <a href="{% url "tasks_completed" %}">Tasks completed</a>
+            </li>
+            <li>
+                <a href="{% url "create_task" %}">Create tasks</a>
+            </li>
             <li>
                 <a href="/logout">Log out</a>
             </li>
